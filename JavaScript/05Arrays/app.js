@@ -16,3 +16,29 @@ printArray(numberArr);
 
 let arr1 = [`Mohit`, `a`, 5.5, [99, 100]];
 printArray(arr1);
+
+// add item
+// push() Appends new elements to the end of an array, and returns the new length of the array.
+let arrExample = [1, 2, 3];
+printArray(arrExample);
+arrExample.push(4);
+printArray(arrExample);
+// unshift() Inserts new elements at the start of an array, and returns the new length of the array.
+arrExample.unshift(0);
+printArray(arrExample);
+
+//Remove item
+//pop() Removes the last element from an array and returns it. If the array is empty, undefined is returned and the array is not modified.
+arrExample.pop();
+printArray(arrExample);
+//shift() Removes the first element from an array and returns it. If the array is empty, undefined is returned and the array is not modified.
+arrExample.shift();
+printArray(arrExample);
+
+//indexOf() Returns the index of the first occurrence of a value in an array, or -1 if it is not present.
+console.log(arrExample.indexOf(3));
+
+//includes() Determines whether an array includes a certain element, returning true or false as appropriate.
+console.log(arrExample.includes(2));
+arrExample.push('12');
+console.log(arrExample.includes(12)); //strict check
