@@ -53,3 +53,9 @@ let items = document.getElementsByClassName('hello1');
 let data = [].map.call(items, a => a.textContent);
 
 console.log(data);
+
+const body = document.body;
+body.append("Hello");
+const h1Tag = document.createElement("h1");
+h1Tag.innerText = "Hello";
+body.appendChild(h1Tag);
