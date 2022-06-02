@@ -9,11 +9,44 @@
 </head>
 
 <body>
-    <ul>
+    <ul id="UL">
         <li><span class="hello1">list 1</span></li>
         <li><span class="hello2">list 2</span></li>
         <li><span class="hello3">list 3</span></li>
     </ul>
+    <div>
+        <p>Please rate the service:</p>
+        <p>
+            <label for="very-poor">
+                <input type="radio" name="rate" value="Very poor" id="very-poor"> Very poor
+            </label>
+            <label for="poor">
+                <input type="radio" name="rate" value="Poor" id="poor"> Poor
+            </label>
+            <label for="ok">
+                <input type="radio" name="rate" value="OK" id="ok"> OK
+            </label>
+            <label for="good">
+                <input type="radio" name="rate" value="Good"> Good
+            </label>
+            <label for="very-good">
+                <input type="radio" name="rate" value="Very Good" id="very-good"> Very Good
+            </label>
+            <label for="excellent">
+                <input type="radio" name="rate" value="Excellent" id="excellent"> Excellent
+            </label>
+        </p>
+        <p>
+            <button id="btnRate">Submit</button>
+        </p>
+        <p id="output"></p>
+    </div>
+    <div>
+        <p>
+            <button id="countInput">Check number of input field</button>
+        </p>
+        <p id="countOutput"></p>
+    </div>
     <script src="app.js"></script>
 </body>
 
