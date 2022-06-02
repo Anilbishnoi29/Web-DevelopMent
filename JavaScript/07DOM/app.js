@@ -15,8 +15,11 @@ Selecting elements ===================
     The NodeList is an array - like object, not an array object.
 
 3. getElementsByTagName()– select elements by a tag name.
+    The getElementsByTagName() is a method of the document or element object.
+    The getElementsByTagName() accepts a tag name and returns a list of elements with the matching tag name.
+    The getElementsByTagName() returns a live HTMLCollection of elements.The HTMLCollection is an array - like object.
 4. getElementsByClassName()– select elements by one or more class names.
-5. querySelector()– select elements by CSS selectors.
+5. querySelector()– select elements by CSS selectors.(querySelector() and querySelectorAll())
 
 */
 const element = document.getElementById("UL");
@@ -43,4 +46,10 @@ const countOutput = document.getElementById("countOutput");
 countInput.addEventListener('click', () => {
     let noOfInput = document.getElementsByTagName("input");
     countOutput.innerText = `Total : ${noOfInput.length} input fields.`;
-})
+});
+
+
+let items = document.getElementsByClassName('hello1');
+let data = [].map.call(items, a => a.textContent);
+
+console.log(data);
