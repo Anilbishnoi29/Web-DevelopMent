@@ -61,6 +61,7 @@ input:active {
 .taskCategory {
     padding: 1rem;
     width: 25%;
+    padding-right: 0;
 }
 
 .taskCategory .taskCategoryTitle {
@@ -83,6 +84,17 @@ input:active {
 }
 
 
+.taskCategory .taskCategoryList li.activeTaskList:nth-child(1) {
+    margin: .5rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    background-color: #1240F5;
+    transition: .0s;
+    border-radius: 1rem;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
 .taskCategory .taskCategoryList li.activeTaskList {
     margin: .5rem 0;
     font-size: 1.5rem;
@@ -90,6 +102,8 @@ input:active {
     background-color: #1240F5;
     transition: .0s;
     border-radius: 1rem;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
 }
 
 .taskCategory .taskCategoryList li.activeTaskList:nth-child(2n) {
@@ -139,8 +153,9 @@ input:active {
     color: var(--white-color);
     padding: 1rem;
     cursor: pointer;
-    background-color: var(--body-bgColor);
+    background-color: var(--p-color);
     border-radius: .5rem;
+    margin-right: 1rem;
 }
 
 .addtaskCategoryList,
@@ -181,6 +196,7 @@ input:active {
     background-color: var(--body-bgColor);
     border-radius: 1rem;
     padding: 1.5rem 2.5rem;
+    margin-left: 0;
 }
 
 .allTaskTitle {
