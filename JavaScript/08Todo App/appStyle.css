@@ -23,7 +23,8 @@ html {
 /* body */
 body {
     min-height: 100%;
-    min-height: 900px;
+    min-height: 100vh;
+    overflow-y: auto;
     background-color: var(--body-bgColor);
     overflow-x: hidden;
     width: 100%;
@@ -52,7 +53,7 @@ input:active {
 #todoMain {
     margin: 1rem;
     padding: 1rem;
-    min-height: 900px;
+    min-height: 100vh;
     border-radius: 1rem;
     background-color: var(--todo-category-bg);
     display: flex;
@@ -60,8 +61,7 @@ input:active {
 
 .taskCategory {
     padding: 1rem;
-    width: 25%;
-    padding-right: 0;
+    width: 30%;
 }
 
 .taskCategory .taskCategoryTitle {
@@ -78,9 +78,14 @@ input:active {
 .taskCategory .taskCategoryList li {
     margin: .5rem 0;
     font-size: 1.2rem;
-    padding: 1rem;
+    padding: 0 1rem;
+    height: 3.5rem;
+    align-items: center;
     pointer-events: all;
     position: relative;
+    align-items: center;
+    display: flex;
+    width: 80%;
 }
 
 
@@ -91,8 +96,6 @@ input:active {
     background-color: #1240F5;
     transition: .0s;
     border-radius: 1rem;
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
 }
 
 .taskCategory .taskCategoryList li.activeTaskList {
@@ -102,8 +105,8 @@ input:active {
     background-color: #1240F5;
     transition: .0s;
     border-radius: 1rem;
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
+    display: flex;
+    justify-content: space-between;
 }
 
 .taskCategory .taskCategoryList li.activeTaskList:nth-child(2n) {
@@ -170,8 +173,9 @@ input:active {
     font-size: 1rem;
     display: grid;
     place-items: center;
-    width: 75%;
-    margin-right: 2%;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .taskCategoryList li {
@@ -250,11 +254,28 @@ input:active {
     opacity: 0;
 }
 
-#allTaskList li #trash {
+#trashOfUl,
+#trash {
     text-align: right;
     color: #AD294B;
     font-size: 1.2rem;
     opacity: 0;
+}
+
+li.activeTaskList #trashOfUl i {
+    pointer-events: none;
+}
+
+li.activeTaskList #trashOfUl {
+    opacity: 1;
+    display: block !important;
+    color: var(--white-color);
+    padding: 1rem;
+    cursor: pointer;
+    position: absolute;
+    right: -60px;
+    background: var(--p-color);
+    border-radius: 0.7rem;
 }
 
 #allTaskList li.taskComplated #trash {
