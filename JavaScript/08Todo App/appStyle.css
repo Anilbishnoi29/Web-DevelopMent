@@ -22,12 +22,9 @@ html {
 /* style */
 /* body */
 body {
-    min-height: 100%;
     min-height: 100vh;
-    overflow-y: auto;
     background-color: var(--body-bgColor);
     overflow-x: hidden;
-    width: 100%;
     color: var(--white-color);
     font-family: 'Roboto', sans-serif;
 }
@@ -40,14 +37,6 @@ input:active {
     background-color: transparent;
     border: none;
     outline: none;
-}
-
-.w-100 {
-    width: 100%;
-}
-
-.w-25 {
-    width: 2rem;
 }
 
 #todoMain {
@@ -86,27 +75,19 @@ input:active {
     align-items: center;
     display: flex;
     width: 80%;
-}
-
-
-.taskCategory .taskCategoryList li.activeTaskList:nth-child(1) {
-    margin: .5rem 0;
-    font-size: 1.5rem;
-    font-weight: 600;
-    background-color: #1240F5;
-    transition: .0s;
     border-radius: 1rem;
+    cursor: pointer;
 }
 
 .taskCategory .taskCategoryList li.activeTaskList {
-    margin: .5rem 0;
     font-size: 1.5rem;
     font-weight: 600;
-    background-color: #1240F5;
-    transition: .0s;
     border-radius: 1rem;
-    display: flex;
     justify-content: space-between;
+}
+
+.taskCategory .taskCategoryList li.activeTaskList:nth-child(1) {
+    background-color: #1240F5;
 }
 
 .taskCategory .taskCategoryList li.activeTaskList:nth-child(2n) {
@@ -128,8 +109,6 @@ input:active {
     bottom: 0;
     margin: auto;
 }
-
-
 
 .taskCategoryList li.activeTaskList::before {
     background-color: #1240F5;
@@ -176,10 +155,6 @@ input:active {
     width: 60%;
     margin-left: auto;
     margin-right: auto;
-}
-
-.taskCategoryList li {
-    cursor: pointer;
 }
 
 #ulTitle {
