@@ -1,0 +1,227 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    position: relative;
+    z-index: 0;
+    background: #f1f1f1;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+}
+
+section {
+    display: flex;
+}
+
+#before {
+    position: fixed;
+    width: 200%;
+    top: 0;
+    height: 100vh;
+    transform: translateX(0%);
+    background: #04a2e0;
+}
+
+#one,
+#two,
+#three {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transition: all 1s;
+    display: flex;
+    justify-content: space-between;
+}
+
+#one {
+    z-index: 1;
+    background: #f4c12a;
+}
+
+#two,
+#three {
+    z-index: 2;
+    transform: translatey(+100%) scale(1);
+    background: rgb(169, 231, 231);
+}
+
+#three {
+    z-index: 3;
+    background: rgb(202, 156, 236);
+}
+
+#two.twoOpen,
+#three.threeOpen {
+    transition: all 1s;
+    transform: translatey(0%) scale(1);
+    transform-origin: center;
+    opacity: 1;
+}
+
+.left {
+    flex: 1;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10rem;
+}
+
+#one .left {
+    background: #f4c12a;
+}
+
+#two .left {
+    background: rgb(169, 231, 231);
+}
+
+#three .left {
+    background: rgb(202, 156, 236);
+}
+
+.right {
+    flex: 1;
+}
+
+.text {
+    width: 100%;
+    float: right;
+    padding: 2em;
+    animation: right 1s ease-out forwards;
+    overflow: hidden;
+    animation-delay: 0.85s;
+    opacity: 0;
+}
+
+@keyframes right {
+    0% {
+        transform: translateX(5rem);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateX(0rem);
+        opacity: 1;
+    }
+}
+
+.text h1 {
+    font-size: 4rem;
+    margin-bottom: 0.3em;
+}
+
+.text h1 span {
+    font-size: 7rem;
+    margin-bottom: 0.3em;
+}
+
+a {
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 1em 1.5em;
+    background: #000;
+    color: #fff;
+    display: inline-flex;
+    border: 2px solid #000;
+    transition: transform 0.5s;
+    /* display: flex; */
+    align-items: center;
+    margin-top: 1em;
+    margin-right: 1em;
+}
+
+a:hover {
+    transform: translateX(10px);
+    transition: transform 0.5s;
+}
+
+.text p {
+    text-align: justify;
+    margin-bottom: 0.3em;
+}
+
+.text h1 span {
+    font-size: 7rem;
+    margin-bottom: 0.3em;
+}
+
+.loader {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    animation: disable 2s forwards;
+    animation-delay: 0.65s;
+}
+
+@keyframes disable {
+    0% {
+        width: 100%;
+        height: 100vh;
+    }
+    100% {
+        width: 0%;
+        height: 100vh;
+    }
+}
+
+.loader .loaderone,
+.loader .loadertwo,
+.loader .loaderthree {
+    width: 100%;
+    height: 33.33vh;
+    z-index: 99;
+    background: rgb(0, 0, 0);
+    animation: slideleft 1s forwards;
+    animation-delay: 0.25s;
+}
+
+.loader .loadertwo {
+    animation-delay: 0.35s;
+}
+
+.loader .loaderthree {
+    animation-delay: 0.45s;
+}
+
+@keyframes slideleft {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 0%;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    #one,
+    #two,
+    #three {
+        flex-direction: column;
+    }
+    .text h1 {
+        font-size: 2rem;
+        margin-bottom: 0.3em;
+    }
+    .text h1 span {
+        font-size: 4rem;
+        margin-bottom: 0.3em;
+    }
+    a {
+        font-size: 1rem;
+    }
+}

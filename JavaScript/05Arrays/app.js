@@ -42,3 +42,14 @@ console.log(arrExample.indexOf(3));
 console.log(arrExample.includes(2));
 arrExample.push('12');
 console.log(arrExample.includes(12)); //strict check
+
+let arrD = [2, 4, [5, 6]];
+let [i, j, [k, l]] = arrD;
+console.log(i, j, k, l);
+
+// undefine
+let [a, b, c] = [1, 2];
+console.log(a, b, c)
+// undefine vs default
+let [d = 1, e = 2, f = 3] = [1, 2];
+console.log(d, e, f);
