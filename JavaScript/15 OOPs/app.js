@@ -1,11 +1,29 @@
 'use strict';
-const arr = ["Apple", "Book", "Cat", "Date", "Enemy", "Fun"];
 
-// 1. forEach()
-// forEach(callbackfn: (value: string, index: number, array: string[]) => void, thisArg?: any): void
-// A function that accepts up to three arguments. forEach calls the callbackfn function one time for each element in the array.
-// Performs the specified action for each element in an array.
+// Constructor Functions and the new Operator
 
-arr.forEach(v => {
-    console.log(v);
-});
+const Person = function (firstName, DOB) {
+    this.firstName = firstName;
+    this.DOB = DOB;
+
+    // this.calcAge = function () {
+    //     console.log(2022 - this.DOB);
+    // }
+    // this is a bad code
+}
+
+// it's good
+Person.prototype.calcAge = function () {
+    console.log(2022 - this.DOB);
+}
+const jonas = new Person("Jonas", 1991);
+console.log(jonas);
+const anil = new Person("anil", 1998);
+console.log(anil);
+anil.calcAge();
+
+
+console.log(anil instanceof Person); // to check instance ?
+
+// Prototypes
+Person
