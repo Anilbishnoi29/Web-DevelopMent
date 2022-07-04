@@ -32,3 +32,31 @@ const yearsLeft = (birthYear, firstName) => {
 };
 console.log(yearsLeft(1991, 'Mohit'));
 console.log(yearsLeft(1971, 'Mohit'));
+
+// Callback
+
+function fun(text, functionPass) {
+    return typeof functionPass === "function" ? functionPass(text) : "Not a function";
+}
+
+const result = fun("hello", function (text) {
+    return text.charAt(0).toUpperCase() + text.slice(1);
+})
+console.log(result);
+
+// IIFE
+
+(function () {
+    console.log("IIFE")
+})();
+
+// arrow functions
+
+const login = userName => console.log(userName);
+login("Root");
+
+const signUp = (userName, password) => {
+    console.log(`User name is ${userName}`);
+    console.log(`Password is ${password}`);
+}
+signUp("Admin", "root");
