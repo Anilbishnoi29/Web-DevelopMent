@@ -61,3 +61,22 @@ arr.forEach(function (item, index) {
         console.log(`arr ${index+1}: you withdrew ${item}`);
     }
 })
+
+console.log('');
+console.log('split()');
+
+// arr = 'Anil Bishnoi'; // simple string
+// let userName = arr.toLowerCase().split(' ');
+// console.log(userName);
+// // console.log(userName);
+// // userName = arr.toLowerCase().split(' ').map(name => name[0]);
+// userName = arr.toLowerCase().split(' ').map(name => name[0]).join('');
+// console.log(userName);
+
+const creatingUserName = function (name) {
+    const userName = name.toLowerCase().split(' ').map(name => name[0]).join('');
+    return userName;
+};
+console.log(creatingUserName('Apple Book Cat'));
+console.log(creatingUserName('Apple Book '));
+console.log(creatingUserName('Apple Cat'));
