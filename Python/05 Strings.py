@@ -6,3 +6,4 @@
 str="Hello World";
 slice_result=str[0:5]; # Hello
 print(slice_result);
+print('''Hello 3''')
